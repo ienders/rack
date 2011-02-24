@@ -458,7 +458,7 @@ module Rack
           read_buffer = ''
 
           status = input.read(boundary_size, read_buffer)
-          raise EOFError, "bad content body"  unless status == boundary + EOL
+#          raise EOFError, "bad content body"  unless status == boundary + EOL
 
           rx = /(?:#{EOL})?#{Regexp.quote boundary}(#{EOL}|--)/n
 
